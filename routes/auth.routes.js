@@ -75,9 +75,7 @@ router.post("/login", (req, res, next) => {
 
 
 router.get('/user-profile', (req, res) => {
-
-    res.send(`display user profile for.... ${req.session.currentUser.email}`)
-        res.render('users/user-profile', { userInSession: req.session.currentUser });
+    res.render('users/user-profile', { userInSession: req.session.currentUser });
 });
 
 module.exports = router;
